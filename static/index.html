@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Proofreader</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">AI Proofreader</h1>
+            <p class="subtitle">Intelligent text correction with sentence-level diff visualization</p>
+        </header>
+
+        <main class="main">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="text-input" class="input-label">Enter your text to proofread:</label>
+                    <textarea 
+                        id="text-input" 
+                        class="text-input" 
+                        placeholder="Paste your text here. The AI will analyze it sentence by sentence and suggest corrections..."
+                        rows="8"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="proofread-btn" class="btn btn-primary">
+                            <span class="btn-text">Proofread Text</span>
+                            <div class="loading-spinner" style="display: none;"></div>
+                        </button>
+                        <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2 class="results-title">Proofreading Results</h2>
+                    <div class="results-stats">
+                        <span id="corrections-count">0 corrections found</span>
+                    </div>
+                </div>
+                
+                <div class="corrections-container" id="corrections-container">
+                    <!-- Corrections will be dynamically inserted here -->
+                </div>
+
+                <div class="final-actions">
+                    <button id="accept-all-btn" class="btn btn-success">Accept All Changes</button>
+                    <button id="reject-all-btn" class="btn btn-danger">Reject All Changes</button>
+                    <button id="copy-result-btn" class="btn btn-secondary">Copy Final Text</button>
+                </div>
+
+                <div class="final-text-section">
+                    <h3 class="final-text-title">Final Text:</h3>
+                    <div class="final-text" id="final-text"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
