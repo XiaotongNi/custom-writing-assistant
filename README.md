@@ -1,6 +1,6 @@
 # AI Proofreader
 
-A web-based proofreader that utilizes LLM for intelligent text correction with sentence-level diff visualization.
+A web-based proofreader that utilizes LLM for intelligent text correction.
 
 ## Features
 
